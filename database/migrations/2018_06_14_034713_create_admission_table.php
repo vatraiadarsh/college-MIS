@@ -20,9 +20,6 @@ class CreateAdmissionTable extends Migration
             $table->string('email')->unique();
             $table->string('city');
             $table->string('education');
-            $table->string('course_id')->unsigned();
-            $table->foreign('course_id')->references('id')
-            ->on(admin_course);
             $table->boolean('status');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable();

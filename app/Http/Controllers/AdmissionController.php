@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admission;
-use AdminCourse;
+use App\AdminCourse;
 use Illuminate\Http\Request;
 
 class AdmissionController extends Controller

@@ -84,9 +84,9 @@ class CourseController extends Controller
     public function update(Request $request, AdminCourse $adminCourse)
     {
 
-        $course->course_name=$request->input('course_name');
-        $course->status=1;
-        $course->save();
+        $adminCourse->course_name=$request->input('course_name');
+        $adminCourse->status=$request->has('status');
+        $adminCourse->save();
         return redirect('admin/courses');
     }
 
